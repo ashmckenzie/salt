@@ -1,0 +1,10 @@
+master: salt.the-rebellion.net
+log_level: warning
+
+file_roots:
+  base:
+    - ./states/base
+
+pillar_roots:
+  base:
+    - ./pillars/base

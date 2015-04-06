@@ -1,0 +1,9 @@
+log_level: debug
+
+file_roots:
+  base:
+    - ./states/base
+
+pillar_roots:
+  base:
+    - ./pillars/base
