@@ -1,5 +1,5 @@
 master: salt.the-rebellion.net
-log_level: warning
+log_level: debug
 
 file_roots:
   base:

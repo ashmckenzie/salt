@@ -1,6 +1,5 @@
-checkin:
-  schedule.present:
-    - function: state.highstate
-    - minutes: 30
-    - maxrunning: 1
-    - splay: 30
+include:
+  - schedule.checkin
+  {%- if salt['grains.get']('id') == 'the-rebellion' %}
+  - schedule.updates
+  {%- endif %}
