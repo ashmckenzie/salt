@@ -1,5 +1,3 @@
-remove:
-  - joe
 install:
   - watch
   - coreutils

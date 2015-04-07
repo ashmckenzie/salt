@@ -1,5 +1,3 @@
-remove:
-  - joe
 install:
 - mailutils
 - apt-show-versions

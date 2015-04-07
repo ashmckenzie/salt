@@ -1,3 +1,4 @@
+remove: []
 install:
   - nmap
   - tmux
