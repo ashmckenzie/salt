@@ -1,28 +1,31 @@
-install:
-- mailutils
-- apt-show-versions
-- vim-nox
-- python-dev
-- htop
-- python-software-properties
-- build-essential
-- make
-- libreadline-dev
-- zlib1g-dev
-- libssl-dev
-- libreadline6-dev
-- libyaml-dev
-- libxml2-dev
-- libxslt1-dev
-- ack-grep
-- ufw
-- apt-transport-https
-- ntp
-- ntpdate
-- rsnapshot
-- dstat
-- mtr
-- fail2ban
-- vnstat
-- stunnel4
-- dpkg-repack
+debian:
+  remove: []
+  install:
+  - mailutils
+  - apt-show-versions
+  - vim-nox
+  - python-dev
+  - htop
+  - python-software-properties
+  - python-dateutil
+  - build-essential
+  - make
+  - libreadline-dev
+  - zlib1g-dev
+  - libssl-dev
+  - libreadline6-dev
+  - libyaml-dev
+  - libxml2-dev
+  - libxslt1-dev
+  - ack-grep
+  - ufw
+  - apt-transport-https
+  - ntp
+  - ntpdate
+  - rsnapshot
+  - dstat
+  - mtr
+  - fail2ban
+  - vnstat
+  - stunnel4
+  - dpkg-repack

@@ -1,2 +1,4 @@
-remove:
-  - whoopsie
+ubuntu:
+  install: []
+  remove:
+    - whoopsie

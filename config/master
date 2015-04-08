@@ -7,3 +7,9 @@ file_roots:
 pillar_roots:
   base:
     - ./pillars/base
+  private
+    - ./pillars/private
+
+reactor:
+  - 'minion_start':
+    - salt://reactor/sync_grains.sls

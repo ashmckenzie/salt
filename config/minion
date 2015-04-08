@@ -8,3 +8,5 @@ file_roots:
 pillar_roots:
   base:
     - ./pillars/base
+  private:
+    - ./pillars/private

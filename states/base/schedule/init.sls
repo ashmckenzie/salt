@@ -1,5 +1,5 @@
 include:
-  - schedule.checkin
-  {%- if salt['grains.get']('id') == 'the-rebellion' %}
-  - schedule.updates
+  - schedule.minion
+  {%- if salt['grains.get']('id') in salt['pillar.get']('private:master_names') %}
+  - schedule.master
   {%- endif %}
