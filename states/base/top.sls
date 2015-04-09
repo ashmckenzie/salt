@@ -1,4 +1,5 @@
 base:
   '*':
+    - repos
     - packages
     - schedule
