@@ -1,14 +1,14 @@
-log_level: debug
+log_level: error
 
 file_roots:
   base:
-    - ./states/base
+    - /srv/salt/states/base
 
 pillar_roots:
   base:
-    - ./pillars/base
+    - /srv/salt/pillars/base
   private:
-    - ./pillars/private
+    - /srv/salt/pillars/private
 
 reactor:
   - 'minion_start':

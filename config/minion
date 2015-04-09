@@ -1,12 +1,2 @@
 master: salt.the-rebellion.net
-log_level: debug
-
-file_roots:
-  base:
-    - ./states/base
-
-pillar_roots:
-  base:
-    - ./pillars/base
-  private:
-    - ./pillars/private
+log_level: error

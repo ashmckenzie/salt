@@ -1,12 +1,2 @@
 master: 192.168.37.20
-log_level: debug
-
-file_roots:
-  base:
-    - /srv/salt/states/base
-
-pillar_roots:
-  base:
-    - /srv/salt/pillars/base
-  private:
-    - /srv/salt/vagrant/pillars/private
+log_level: error
