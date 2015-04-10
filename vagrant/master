@@ -1,4 +1,10 @@
 log_level: error
+state_output: mixed
+
+smtp.from: "Salt <vagrant@localhost>"
+smtp.to: "Vagrant <vagrant@localhost>"
+smtp.host: "localhost"
+smtp.fields: "id, fun"
 
 file_roots:
   base:
@@ -12,4 +18,6 @@ pillar_roots:
 
 reactor:
   - 'minion_start':
-    - salt://reactor/sync_grains.sls
+    - /srv/salt/reactor/sync_grains.sls
+  - 'salt/minion/*/start':
+    - /srv/salt/reactor/highstate_run.sls

@@ -3,4 +3,4 @@ package_upgrades:
     - function: cmd.run
     - when: 8:30am
     - job_args:
-      - 'salt --out=pprint "*" pkg.list_upgrades | mailx {{salt['pillar.get']('private:admin_email')}} -s "Package report"'
+      - 'salt --out=json "*" pkg.list_upgrades | mailx {{salt['pillar.get']('private:admin_email')}} -s "Package report"'

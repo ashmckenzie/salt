@@ -1,4 +1,5 @@
 log_level: error
+state_output: mixed
 
 file_roots:
   base:
@@ -12,4 +13,6 @@ pillar_roots:
 
 reactor:
   - 'minion_start':
-    - salt://reactor/sync_grains.sls
+    - /srv/salt/reactor/sync_grains.sls
+  - 'salt/minion/*/start':
+    - /srv/salt/reactor/highstate_run.sls
