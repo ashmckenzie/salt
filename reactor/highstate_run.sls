@@ -3,4 +3,4 @@
 highstate_run:
   local.state.highstate:
     - tgt: {{data['id']}}
-    - ret: smtp
+    - ret: yaml_smtp
