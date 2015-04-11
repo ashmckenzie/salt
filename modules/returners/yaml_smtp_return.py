@@ -44,33 +44,25 @@ There are a few things to keep in mind:
 
 '''
 
-# Import python libs
-import os
-import pprint
 import logging
-import smtplib
 import yaml
 
-from email.utils import formatdate
+# from email.utils import formatdate
 
-# Import Salt libs
 import salt.utils
 
-try:
-    import gnupg
-    HAS_GNUPG = True
-except ImportError:
-    HAS_GNUPG = False
+# HACK!
+import sys
+sys.path.append('/srv/salt/modules')
 
+from smtp_sender import *
 
 log = logging.getLogger(__name__)
 
 __virtualname__ = 'yaml_smtp'
 
-
 def __virtual__():
     return __virtualname__
-
 
 def returner(ret):
     '''
@@ -112,7 +104,6 @@ def returner(ret):
     log.debug("yaml_smtp_return: Subject is '{0}'".format(subject))
 
     out = ret.get('return')
-    # formatted_out = pprint.pformat(out)
     formatted_out = yaml.dump(out, default_flow_style=False)
 
     content = ('ID: {0}\r\n'
@@ -127,43 +118,8 @@ def returner(ret):
                     ret.get('jid'),
                     formatted_out)
 
-    if HAS_GNUPG and gpgowner:
-        gpg = gnupg.GPG(gnupghome=os.path.expanduser('~{0}/.gnupg'.format(gpgowner)),
-                        options=['--trust-model always'])
-        encrypted_data = gpg.encrypt(content, to_addrs)
-        if encrypted_data.ok:
-            log.debug('yaml_smtp_return: Encryption successful')
-            content = str(encrypted_data)
-        else:
-            log.error('yaml_smtp_return: Encryption failed, only an error message will be sent')
-            content = 'Encryption failed, the return data was not sent.\r\n\r\n{0}\r\n{1}'.format(
-                    encrypted_data.status, encrypted_data.stderr)
-
-    message = ('From: {0}\r\n'
-               'To: {1}\r\n'
-               'Date: {2}\r\n'
-               'Subject: {3}\r\n'
-               '\r\n'
-               '{4}').format(from_addr,
-                             to_addrs,
-                             formatdate(localtime=True),
-                             subject,
-                             content)
-
-    log.debug('yaml_smtp_return: Connecting to the server...')
-    server = smtplib.SMTP(host, int(port))
-
-    if smtp_tls is True:
-        server.starttls()
-        log.debug('yaml_smtp_return: TLS enabled')
-    if user and passwd:
-        server.login(user, passwd)
-        log.debug('yaml_smtp_return: Authenticated')
-
-    server.sendmail(from_addr, to_addrs, message)
-    log.debug('yaml_smtp_return: Message sent.')
-    server.quit()
-
+    smtp_sender = SMTPSender(host, port, smtp_tls, gpgowner, user, passwd, log)
+    smtp_sender.send(to_addrs, from_addr, subject, content)
 
 def prep_jid(nocache, passed_jid=None):  # pylint: disable=unused-argument
     '''

@@ -1,3 +1,4 @@
+*.pyc
 sync.sh
 .vagrant
 vagrant/pki/*

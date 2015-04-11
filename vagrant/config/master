@@ -22,3 +22,6 @@ reactor:
     - /srv/salt/reactor/sync_grains.sls
   - 'salt/minion/*/start':
     - /srv/salt/reactor/highstate_run.sls
+
+runner_dirs:
+  - /srv/salt/runners
