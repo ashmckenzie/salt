@@ -52,7 +52,7 @@ class SMTPSender:
                                  subject,
                                  content)
 
-        self.log.debug('SMTPSender.send: Connecting to the server...')
+        self.log.debug('SMTPSender.send: Connecting to the server host=[%s], port=[%s]', self.host, self.port)
         server = smtplib.SMTP(self.host, self.port)
 
         if self.tls is True:
