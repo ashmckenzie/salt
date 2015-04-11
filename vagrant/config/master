@@ -15,7 +15,7 @@ pillar_roots:
   base:
     - /srv/salt/pillars/base
   private:
-    - /srv/salt/vagrant/pillars/private
+    - /srv/salt/vagrant/salt/pillars/private
 
 reactor:
   - 'minion_start':

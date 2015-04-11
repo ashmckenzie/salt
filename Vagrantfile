@@ -15,20 +15,20 @@ Vagrant.configure(2) do |config|
       salt.log_level = 'debug'
       salt.bootstrap_options = '-D -K -p python-dateutil'
       salt.install_type = 'git'
-      salt.install_args = ENV.fetch('SALTSTACK_GIT_RELEASE', 'v2015.2.0rc2')
+      salt.install_args = ENV.fetch('SALTSTACK_GIT_RELEASE', 'v2014.7.4')
 
       salt.install_master = true
-      salt.master_config = 'vagrant/master'
-      salt.minion_config = 'vagrant/minion'
+      salt.master_config = 'vagrant/config/master'
+      salt.minion_config = 'vagrant/config/minion'
 
-      salt.master_key = 'vagrant/pki/master.pem'
-      salt.master_pub = 'vagrant/pki/master.pub'
-      salt.minion_key = 'vagrant/pki/master-minion.pem'
-      salt.minion_pub = 'vagrant/pki/master-minion.pub'
+      salt.master_key = 'vagrant/config/pki/master.pem'
+      salt.master_pub = 'vagrant/config/pki/master.pub'
+      salt.minion_key = 'vagrant/config/pki/master-minion.pem'
+      salt.minion_pub = 'vagrant/config/pki/master-minion.pub'
 
       salt.seed_master = {
-        'master1' => 'vagrant/pki/master-minion.pub',
-        'minion1' => 'vagrant/pki/minion.pub'
+        'master1' => 'vagrant/config/pki/master-minion.pub',
+        'minion1' => 'vagrant/config/pki/minion.pub'
       }
     end
   end
@@ -44,12 +44,13 @@ Vagrant.configure(2) do |config|
       salt.log_level = 'debug'
       salt.bootstrap_options = '-D -K -p python-dateutil'
       salt.install_type = 'git'
-      salt.install_args = ENV.fetch('SALTSTACK_GIT_RELEASE', 'v2015.2.0rc2')
+      salt.install_args = ENV.fetch('SALTSTACK_GIT_RELEASE', 'v2014.7.4')
 
       salt.run_highstate = false
-      salt.minion_config = 'vagrant/minion'
-      salt.minion_key = 'vagrant/pki/minion.pem'
-      salt.minion_pub = 'vagrant/pki/minion.pub'
+      salt.minion_config = 'vagrant/config/minion'
+
+      salt.minion_key = 'vagrant/config/pki/minion.pem'
+      salt.minion_pub = 'vagrant/config/pki/minion.pub'
     end
   end
 end

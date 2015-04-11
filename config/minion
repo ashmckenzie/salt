@@ -1,9 +1,3 @@
 master: salt.the-rebellion.net
 log_level: info
 state_output: mixed
-
-smtp.from: "Salt <ash@the-rebellion.net>"
-smtp.to: "Ash McKenzie <ash@the-rebellion.net>"
-smtp.host: "localhost"
-smtp.subject: "Salt report:"
-smtp.fields: "id,fun"
