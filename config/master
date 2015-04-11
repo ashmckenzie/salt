@@ -17,5 +17,4 @@ reactor:
   - 'salt/minion/*/start':
     - /srv/salt/reactor/highstate_run.sls
 
-runner_dirs:
-  - /srv/salt/runners
+extension_modules: /srv/salt/modules
