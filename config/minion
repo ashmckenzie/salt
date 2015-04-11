@@ -1,4 +1,5 @@
 master: salt.the-rebellion.net
+
 log_level: info
 state_output: mixed
 
@@ -7,3 +8,11 @@ smtp.to: "Ash McKenzie <ash@the-rebellion.net>"
 smtp.host: "localhost"
 smtp.subject: "Salt report:"
 smtp.fields: "id,fun"
+
+peer:
+  5146-amckenzie:
+    - .*
+
+peer_run:
+  5146-amckenzie:
+    - .*

@@ -1,4 +1,4 @@
-log_level: info
+log_level: debug
 state_output: mixed
 
 smtp.from: "Salt <vagrant@localhost>"
