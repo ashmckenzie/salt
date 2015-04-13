@@ -19,6 +19,8 @@ def execute(target, func, *args):
     raw_output = client.cmd(target, func, args)
     output = yaml.dump(raw_output, default_flow_style=False)
 
+    log.debug("custom.execute: " + format(raw_output))
+
     if 'config.option' in __salt__:
         from_addr = __salt__['config.option']('smtp.from')
         to_addrs = __salt__['config.option']('smtp.to')
@@ -47,4 +49,3 @@ def execute(target, func, *args):
 
     smtp_sender = SMTPSender(host, port, smtp_tls, gpgowner, user, passwd)
     smtp_sender.send(to_addrs, from_addr, subject, output)
-    log.debug("custom.ping: " + format(raw_output))

@@ -2,5 +2,6 @@
 sync.sh
 .vagrant
 vagrant/pki/*
+*.sublime-*
 
 pillars/private/*
