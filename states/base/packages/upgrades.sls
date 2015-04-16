@@ -1,4 +1,4 @@
-set_custom_package_upgrades:
+set_package_upgrades_available:
   grains.present:
-    - name: custom_package_upgrades
+    - name: 'package_upgrades_available'
     - value: False
