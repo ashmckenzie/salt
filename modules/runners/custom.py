@@ -16,7 +16,7 @@ log = logging.getLogger(__name__)
 
 def execute(target, func, *args):
     client = salt.client.LocalClient(__opts__['conf_file'])
-    raw_output = client.cmd(target, func, args)
+    raw_output = client.cmd(target, func, args, expr_form='compound')
     output = yaml.dump(raw_output, default_flow_style=False)
 
     log.debug("custom.execute: " + format(raw_output))
