@@ -28,7 +28,8 @@ extension_modules: /srv/salt/modules
 schedule:
   package_upgrades:
     function: custom.execute
-    hours: 6
+    hours: 7
+    minutes: 30
     args:
       - '*'
       - 'pkg.list_upgrades'
