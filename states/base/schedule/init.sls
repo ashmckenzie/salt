@@ -1,5 +1,5 @@
 include:
-  {%- if grains['id'] == 'master1' %}
+  {%- if salt['grains.get']('id') in salt['pillar.get']('master_names') %}
   - schedule.master
   {% endif %}
   - schedule.minion
