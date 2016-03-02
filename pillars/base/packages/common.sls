@@ -9,6 +9,5 @@ common:
     - wget
     - tig
     - mutt
-    - unrar
     - unzip
     - zsh

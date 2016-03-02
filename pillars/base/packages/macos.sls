@@ -17,3 +17,4 @@ macos:
     - ctail
     - jq
     - ssh-copy-id
+    - unrar

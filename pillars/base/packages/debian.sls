@@ -28,3 +28,4 @@ debian:
   - vnstat
   - stunnel4
   - dpkg-repack
+  - unrar-free
