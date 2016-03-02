@@ -1,4 +1,5 @@
 ubuntu:
-  install: []
+  install:
+    - python-software-properties
   remove:
     - whoopsie

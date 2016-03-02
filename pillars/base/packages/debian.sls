@@ -6,7 +6,6 @@ debian:
   - vim-nox
   - python-dev
   - htop
-  - python-software-properties
   - python-dateutil
   - build-essential
   - make
