@@ -1,5 +1,5 @@
-log_level: info
 state_output: mixed
+log_level: info
 
 smtp.from: "Salt <ash@the-rebellion.net>"
 smtp.to: "Ash McKenzie <ash@the-rebellion.net>"
