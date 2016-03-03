@@ -6,7 +6,7 @@ unattended-upgrades:
     - template: jinja
     - source: salt://config/apt/sources.list.jinja
     - defaults:
-        mirror_host: {{ salt['pillar.get']('apt.mirror_host') }}
+        mirror_host: {{ salt['pillar.get']('apt:mirror_host') }}
         mirror_path: {{ salt['pillar.get']('apt:mirror_path') }}
         distributions: {{ salt['pillar.get']('apt:distributions') }}
 
