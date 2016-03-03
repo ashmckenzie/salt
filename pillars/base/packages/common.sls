@@ -11,3 +11,4 @@ common:
     - mutt
     - unzip
     - zsh
+    - sysdig
