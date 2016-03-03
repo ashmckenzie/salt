@@ -25,7 +25,6 @@ debian:
   - rsnapshot
   - stunnel4
   - ufw
-  - unattended-upgrades
   - unrar-free
   - vim-nox
   - vnstat
