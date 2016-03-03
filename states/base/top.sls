@@ -5,6 +5,7 @@ base:
     {% endif %}
     {%- if grains['os_family'] == 'Debian' %}
     - config
+    - apt
     {% endif %}
     - packages
     - schedule

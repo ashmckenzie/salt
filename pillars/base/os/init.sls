@@ -1,6 +1,6 @@
 include:
   {%- if grains['os'] == 'Raspbian' %}
-  - os.raspbian:
+  - os.raspbian
   {% elif grains['os'] == 'Ubuntu' %}
-  - os.ubuntu:
+  - os.ubuntu
   {%- endif %}
