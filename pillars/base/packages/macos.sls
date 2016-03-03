@@ -1,20 +1,21 @@
+---
 macos:
   remove: []
   install:
-    - watch
-    - coreutils
-    - openssh
-    - ack
-    - vim
-    - go
-    - htop-osx
-    - rbenv
-    - ruby-build
-    - minicom
-    - pstree
-    - mtr
-    - multitail
-    - ctail
-    - jq
-    - ssh-copy-id
-    - unrar
+  - ack
+  - coreutils
+  - ctail
+  - go
+  - htop-osx
+  - jq
+  - minicom
+  - mtr
+  - multitail
+  - openssh
+  - pstree
+  - rbenv
+  - ruby-build
+  - ssh-copy-id
+  - unrar
+  - vim
+  - watch

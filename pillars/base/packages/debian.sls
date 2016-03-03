@@ -1,31 +1,32 @@
 debian:
   remove: []
   install:
-  - mailutils
+  - ack-grep
   - apt-show-versions
-  - vim-nox
-  - python-dev
-  - htop
-  - python-dateutil
+  - apt-transport-https
   - build-essential
-  - make
+  - dpkg-repack
+  - dstat
+  - fail2ban
+  - htop
   - libreadline-dev
-  - zlib1g-dev
-  - libssl-dev
   - libreadline6-dev
-  - libyaml-dev
+  - libssl-dev
   - libxml2-dev
   - libxslt1-dev
-  - ack-grep
-  - ufw
-  - apt-transport-https
+  - libyaml-dev
+  - mailutils
+  - make
+  - mtr
   - ntp
   - ntpdate
+  - python-dateutil
+  - python-dev
   - rsnapshot
-  - dstat
-  - mtr
-  - fail2ban
-  - vnstat
   - stunnel4
-  - dpkg-repack
+  - ufw
+  - unattended-upgrades
   - unrar-free
+  - vim-nox
+  - vnstat
+  - zlib1g-dev

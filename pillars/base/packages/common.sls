@@ -1,14 +1,15 @@
+---
 common:
   remove: []
   install:
-    - nmap
-    - tmux
-    - git
-    - python
-    - curl
-    - wget
-    - tig
-    - mutt
-    - unzip
-    - zsh
-    - sysdig
+  - curl
+  - git
+  - mutt
+  - nmap
+  - python
+  - sysdig
+  - tig
+  - tmux
+  - unzip
+  - wget
+  - zsh
