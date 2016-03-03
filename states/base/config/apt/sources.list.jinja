@@ -1,3 +1,3 @@
-{% for distribution in distributions %}
+{%- for distribution in distributions %}
 deb {{ mirror_host }}/{{ mirror_path }} {{ distribution }}
-{% endif %}
+{%- endfor %}

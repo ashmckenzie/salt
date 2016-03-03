@@ -1,14 +1,14 @@
 include:
   - packages.common:
-      key: packages
+      key: config
   {%- if grains['os_family'] == 'Debian' %}
   - packages.debian:
-      key: packages
+      key: config
   {%- if grains['os'] == 'Ubuntu' %}
   - packages.ubuntu:
-      key: packages
+      key: config
   {%- endif %}
   {% elif grains['os_family'] == 'MacOS' %}
   - packages.macos:
-      key: packages
+      key: config
   {%- endif %}

@@ -1,4 +1,6 @@
 base:
   '*':
-    - os
+    {%- if grains['os_family'] == 'Debian' %}
+    - apt
+    {%- endif %}
     - packages
