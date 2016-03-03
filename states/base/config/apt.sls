@@ -6,9 +6,9 @@ unattended-upgrades:
     - template: jinja
     - source: salt://config/apt/sources.list.jinja
     - defaults:
-        mirror_host: {{ apt.mirror_host }}
-        mirror_path: {{ apt.mirror_path }}
-        distributions: {{ apt.distributions }}
+        mirror_host: {{ os.apt.mirror_host }}
+        mirror_path: {{ os.apt.mirror_path }}
+        distributions: {{ os.apt.distributions }}
 
 /etc/apt/apt.conf.d/10periodic:
   file.managed:
