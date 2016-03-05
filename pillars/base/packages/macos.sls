@@ -5,6 +5,7 @@ packages:
       - ack
       - coreutils
       - ctail
+      - fzf
       - go
       - htop-osx
       - jq
@@ -19,3 +20,5 @@ packages:
       - unrar
       - vim
       - watch
+      - zsh-completions
+      - zsh-syntax-highlighting
