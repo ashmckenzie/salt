@@ -7,7 +7,7 @@
 set_package_upgrades:
   grains.present:
     - name: 'package_upgrades'
-    - value: {{ package_upgrades }}
+    - value: "{{ package_upgrades }}"
 
 set_package_upgrades_available:
   grains.present:
