@@ -20,7 +20,5 @@ pillar_roots:
 reactor:
   - 'minion_start':
     - /srv/salt/reactor/sync_grains.sls
-  - 'salt/minion/*/start':
-    - /srv/salt/reactor/highstate_run.sls
 
 extension_modules: /srv/salt/modules
