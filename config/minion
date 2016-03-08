@@ -1,6 +1,6 @@
 master: salt.the-rebellion.net
 state_output: mixed
-log_level: info
+log_level: error
 
 smtp.from: "Salt <ash@the-rebellion.net>"
 smtp.to: "Ash McKenzie <ash@the-rebellion.net>"
