@@ -13,6 +13,7 @@ packages:
       - mtr
       - multitail
       - openssh
+      - p7zip
       - pstree
       - rbenv
       - ruby-build
