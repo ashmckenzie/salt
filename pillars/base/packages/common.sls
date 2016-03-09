@@ -6,6 +6,7 @@ packages:
       - git
       - mutt
       - nmap
+      - p7zip
       - python
       - sysdig
       - tig
