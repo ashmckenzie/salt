@@ -2,6 +2,8 @@
 {% set package_upgrades = salt['pkg.list_upgrades'](refresh=False) %}
 {%- elif grains['os_family'] == 'MacOS' %}
 {% set package_upgrades = salt['pkg.list_upgrades']() %}
+{%- else %}
+{% set package_upgrades = [] %}
 {% endif %}
 
 set_package_upgrades:

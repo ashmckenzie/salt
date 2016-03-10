@@ -1,8 +1,11 @@
 include:
-  {%- if grains['os'] == 'Raspbian' %}
-  - apt.raspbian:
-      key: config
-  {%- elif grains['os'] == 'Ubuntu' %}
+  {%- if grains['os'] == 'Ubuntu' %}
   - apt.ubuntu:
+      key: config
+  {%- elif grains['os'] == 'Debian' %}
+  - apt.debian:
+      key: config
+  {%- elif grains['os'] == 'Raspbian' %}
+  - apt.raspbian:
       key: config
   {%- endif %}
