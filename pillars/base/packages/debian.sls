@@ -28,5 +28,6 @@ packages:
       - ufw
       - unrar-free
       - vim-nox
+      - virt-what
       - vnstat
       - zlib1g-dev

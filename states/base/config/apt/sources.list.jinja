@@ -1,3 +1,5 @@
-{%- for distribution in distributions %}
-deb {{ mirror_host }}/{{ mirror_path }} {{ distribution }}
+{%- for mirror in mirrors %}
+  {%- for distribution in mirror['distributions'] %}
+deb {{ mirror['host'] }}/{{ mirror['path'] }} {{ distribution }}
+  {%- endfor %}
 {%- endfor %}

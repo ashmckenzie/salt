@@ -5,6 +5,15 @@ at:
     - name: atd
     - enable: True
 
+/etc/salt/minion:
+  file.managed:
+    - source: salt://config/salt/minion/minion.conf.jinja
+    - makedirs: True
+  cmd.wait:
+    - name: echo sv restart salt-minion | at now + 5 minute
+    - watch:
+      - file: /etc/salt/minion
+
 /etc/salt/minion.d/main.conf:
   file.managed:
     - source: salt://config/salt/minion/main.conf.jinja
