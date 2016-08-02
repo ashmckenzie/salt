@@ -27,6 +27,7 @@ packages:
       - stunnel4
       - ufw
       - unrar-free
+      - unzip
       - vim-nox
       - vnstat
       - zlib1g-dev

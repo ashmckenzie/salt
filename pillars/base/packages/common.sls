@@ -11,6 +11,5 @@ packages:
       - sysdig
       - tig
       - tmux
-      - unzip
       - wget
       - zsh
