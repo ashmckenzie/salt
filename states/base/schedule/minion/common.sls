@@ -1,6 +1,4 @@
 checkin:
   schedule.present:
     - function: state.highstate
-    - minutes: 30
-    - seconds: 0
-    - splay: 60
+    - cron: '* */6 * * *'
