@@ -21,6 +21,7 @@ packages:
       - mtr
       - ntp
       - ntpdate
+      - python-croniter
       - python-dateutil
       - python-dev
       - rsnapshot
