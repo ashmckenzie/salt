@@ -1,8 +1,8 @@
 apt:
-  mirror_host: "http://us.archive.ubuntu.com"
-  mirror_path: "ubuntu/"
+  mirror_host: "mirror://mirrors.ubuntu.com/"
+  mirror_path: "mirrors.txt"
   distributions:
-    - "trusty main restricted universe multiverse"
-    - "trusty-updates main restricted universe multiverse"
-    - "trusty-backports main restricted universe multiverse"
-    - "trusty-security main restricted universe multiverse"
+    - " main restricted universe multiverse"
+    - "-updates main restricted universe multiverse"
+    - "-backports main restricted universe multiverse"
+    - "-security main restricted universe multiverse"

@@ -1,4 +1,4 @@
 checkin:
   schedule.present:
-    - function: state.highstate
+    - function: state.apply
     - cron: '* */6 * * *'
