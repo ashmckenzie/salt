@@ -1,5 +1,5 @@
 checkin:
   schedule.present:
-    - function: state.apply
+    - function: state.highstate
     - seconds: 3600
     - splay: 30
