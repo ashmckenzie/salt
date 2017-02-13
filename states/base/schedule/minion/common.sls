@@ -1,4 +1,5 @@
 checkin:
   schedule.present:
     - function: state.apply
-    - cron: '* */6 * * *'
+    - seconds: 3600
+    - splay: 30
