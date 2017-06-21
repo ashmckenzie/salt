@@ -14,4 +14,4 @@ packages:
       - tig
       - tmux
       - wget
-       zsh
+      - zsh
