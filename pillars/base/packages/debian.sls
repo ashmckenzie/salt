@@ -5,6 +5,7 @@ packages:
       - ack-grep
       - apt-show-versions
       - apt-transport-https
+      - auditd
       - build-essential
       - dpkg-repack
       - dstat
