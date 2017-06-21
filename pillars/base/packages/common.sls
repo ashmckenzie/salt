@@ -4,6 +4,8 @@ packages:
     install:
       - curl
       - git
+      - iftop
+      - iotop
       - mutt
       - nmap
       - p7zip
@@ -12,4 +14,4 @@ packages:
       - tig
       - tmux
       - wget
-      - zsh
+       zsh
